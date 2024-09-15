@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadFix: Report Road Problems</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .section {
+            min-height: 100vh;
+            padding: 80px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        #report-form {
+            background-color: #f1f8e9;
+        }
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        #map {
+            width: 100%;
+            height: 600px;
+            margin-top: 40px;
+        }
+        .feature {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        #features {
+            background-color: #e8f5e9;
+        }
+        #app-info {
+            background-color: #e3f2fd;
+        }
+        #how-it-works {
+            background-color: #fff3e0;
+        }
+        #testimonials {
+            background-color: #fce4ec;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        #contact {
+            background-color: #37474f;
+            color: #fff;
+        }
+        footer {
+            background-color: #263238;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="hero" class="section">
+        <div class="container">
+            <h1 data-aos="fade-down">Welcome to RoadFix</h1>
+            <p data-aos="fade-up">Help us make our roads safer by reporting problems in your area. Together, we can improve our infrastructure and ensure smoother, safer journeys for everyone.</p>
+            <a href="#report-form" class="btn" data-aos="zoom-in">Report a Problem</a>
+        </div>
+    </section>
+
+    <section id="report-form" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">Report a Road Problem</h2>
+            <form data-aos="fade-up">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Location of the Problem" required>
+                <textarea placeholder="Describe the problem in detail" rows="4" required></textarea>
+                <input type="file" accept="image/*" required>
+                <button type="submit" class="btn">Submit Report</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="map-section" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">View Reported Problems</h2>
+            <div id="map" data-aos="zoom-in"></div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">Why Use RoadFix?</h2>
+            <div class="feature" data-aos="fade-right">
+                <h3>Easy Reporting</h3>
+                <p>Report road problems in just a few clicks. Upload photos and provide details to help authorities address issues quickly and efficiently.</p>
+            </div>
+            <div class="feature" data-aos="fade-left">
+                <h3>Real-time Updates</h3>
+                <p>Get notifications on the status of your reported problems. See when issues are acknowledged, scheduled for repair, and resolved.</p>
+            </div>
+            <div class="feature" data-aos="fade-right">
+                <h3>Community Driven</h3>
+                <p>Join a community of active citizens working together to improve road conditions and safety in your area. Your reports make a real difference.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="app-info" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">Download Our Mobile App</h2>
+            <p data-aos="fade-up">Get the RoadFix app for easy on-the-go reporting. Available for iOS and Android devices. Report issues anytime, anywhere!</p>
+            <div data-aos="zoom-in">
+                <a href="#" class="btn">Download for iOS</a>
+                <a href="#" class="btn">Download for Android</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">How It Works</h2>
+            <ol data-aos="fade-up">
+                <li>Report a road problem using our website or mobile app</li>
+                <li>Include a photo and detailed description of the issue</li>
+                <li>Our team verifies the report and forwards it to the relevant authorities</li>
+                <li>Track the status of your report in real-time</li>
+                <li>Receive updates when the problem is addressed and resolved</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">What Our Users Say</h2>
+            <div class="testimonial" data-aos="fade-right">
+                <p>"Thanks to RoadFix, the pothole on my street was fixed within a week of reporting! I'm impressed by how quickly the local authorities responded."</p>
+                <p>- Sarah J., Daily Commuter</p>
+            </div>
+            <div class="testimonial" data-aos="fade-left">
+                <p>"The app is so easy to use. I love being able to contribute to making our roads safer. It's great to see the community coming together to improve our infrastructure."</p>
+                <p>- Mike T., Cycling Enthusiast</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 data-aos="fade-down">Contact Us</h2>
+            <p data-aos="fade-up">Have questions or suggestions? We'd love to hear from you! Our team is always ready to assist you and improve our service.</p>
+            <p data-aos="fade-up">Email: info@roadfix.com</p>
+            <p data-aos="fade-up">Phone: (555) 123-4567</p>
+            <p data-aos="fade-up">Address: 123 Fix-It Street, Repair City, RC 12345</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RoadFix. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+
+        // Simulated Google Maps embed (replace with actual Google Maps embed code)
+        function initMap() {
+            const mapDiv = document.getElementById('map');
+            mapDiv.innerHTML = '<img src="/api/placeholder/1400/600" alt="Map Placeholder" style="width:100%;height:100%;object-fit:cover;">';
+        }
+        window.onload = initMap;
+    </script>
+</body>
+</html>
